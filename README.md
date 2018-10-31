@@ -12,15 +12,14 @@ This is a C++ program that studies review data from Amazon in the musical instru
 
 ## Getting Started
 
-In terminal type:     make
-
-to run another time:  ./main
-
-## Introduction and Background
+Terminal:
+Go to the root directory. 
+Type: make
+To run another time, type:  ./main
 
 ## Contributing
 
-Please read [CONTRIBUTING.md] for details on our code of conduct, and the process for submitting pull requests to us.
+Feel free.
 
 ## Authors:
 
@@ -33,5 +32,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Amazon review data: http://jmcauley.ucsd.edu/data/amazon/
-* Markov's chain
-* UCSD course: CSE-100
