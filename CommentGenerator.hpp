@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <vector>
 #include <cctype>
+#include <iostream>
 #include <fstream>  //input file
 using namespace std;
 
@@ -65,12 +66,17 @@ public:
         bool praise = false;
         if (rand() % 2) praise = true;
 
+        if (praise)
+            cout << "Praiser";
+        else
+            cout << "Critic";
+        cout << " Markov says: ";
         string prevWord = getNextWord(".", praise);
         string response = "";
-        
+
         // capitalize the fisrt word
         response += char(toupper(int(prevWord[0]))) + prevWord.substr(1,prevWord.length()-1);
-        
+
         // generate the rest
         while (true){
             if (prevWord == "." && minWords <= 0)
@@ -122,8 +128,8 @@ private:
 
     //a unordered map matches word to <number of next word,
     //a map that match the next word to it frequency that appears after nextword
-    unordered_map<string,pair<unsigned short,unordered_map<string,unsigned short>>> praiser;
-    unordered_map<string,pair<unsigned short,unordered_map<string,unsigned short>>> critic;
+    unordered_map<string,pair<unsigned short,unordered_map<string,unsigned short> > > praiser;
+    unordered_map<string,pair<unsigned short,unordered_map<string,unsigned short> > > critic;
 
     // separate each word and important punctuations
     void tokenize(vector<string> &sentence, const string &line) {

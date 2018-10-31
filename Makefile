@@ -5,14 +5,16 @@
 
 default: main
 
-main: main.o DocumentGenerator AutocompleteUtils
-	$(CXX) $(LDFLAGS) -o main main.o DocumentGenerator.hpp
+main: main.o header
+	g++ main.cpp -o main -w
+	./main
+	# $(CXX) $(LDFLAGS) -o main main.o CommentGenerator.hpp
 
 main.o: main.cpp
-	$(CXX) $(CXXFLAGS) -c main.cpp
+	$(CXX) $(CXXFLAGS) -c main.cpp -w
 
-DocumentGenerator: DocumentGenerator.hpp
-	$(CXX) $(CXXFLAGS) -c DocumentGenerator.hppp
+header: CommentGenerator.hpp
+	$(CXX) $(CXXFLAGS) -c CommentGenerator.hpp -w
 
 clean:
 	$(RM) main *.o *.gch

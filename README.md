@@ -12,7 +12,9 @@ This is a C++ program that studies review data from Amazon in the musical instru
 
 ## Getting Started
 
-In terminal: Make -> ./main
+In terminal type:     make
+
+to run another time:  ./main
 
 ## Introduction and Background
 
@@ -33,4 +35,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Amazon review data: http://jmcauley.ucsd.edu/data/amazon/
 * Markov's chain
 * UCSD course: CSE-100
-
