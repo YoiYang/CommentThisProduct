@@ -15,7 +15,6 @@ This is a C++ program that studies review data from Amazon in the musical instru
 Terminal:
 Go to the root directory. 
 Type: make
-To run another time, type:  ./main
 
 ## Contributing
 
